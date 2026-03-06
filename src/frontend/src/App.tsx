@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import CompatibleWallets from "./components/CompatibleWallets";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import HowItWorks from "./components/HowItWorks";
@@ -13,6 +14,7 @@ export default function App() {
       <main>
         <HeroSection />
         <HowItWorks />
+        <CompatibleWallets />
         <PackagesSection />
         <SupportSection />
       </main>

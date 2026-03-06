@@ -15,9 +15,9 @@ const steps = [
   {
     icon: QrCode,
     step: "02",
-    title: "Send Real USDT",
+    title: "Send Real USDT & Enter Your Wallet",
     description:
-      "Scan the QR code and send the exact amount of Real USDT to our wallet. Enter your name and wallet address so we can process your order.",
+      "Scan the QR code and send the exact Real USDT amount. Then enter the TRC20 wallet address where you want to receive your Flash USDT — compatible with MetaMask, Trust Wallet, Ledger, Trezor, and more.",
     color: "text-gold-brand",
     border: "border-accent/30",
     bg: "bg-accent/10",
