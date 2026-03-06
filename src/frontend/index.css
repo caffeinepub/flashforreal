@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Font Faces ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+/* ─── FlashForReal Design Tokens ─────────────────────────── */
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Dark money-green theme */
+    --background: 0.09 0.025 155;
+    --foreground: 0.95 0.01 130;
+
+    --card: 0.12 0.03 155;
+    --card-foreground: 0.95 0.01 130;
+
+    --popover: 0.13 0.03 155;
+    --popover-foreground: 0.95 0.01 130;
+
+    /* Electric green primary */
+    --primary: 0.78 0.22 145;
+    --primary-foreground: 0.06 0.02 150;
+
+    /* Subtle green secondary */
+    --secondary: 0.16 0.04 155;
+    --secondary-foreground: 0.88 0.05 140;
+
+    --muted: 0.14 0.025 155;
+    --muted-foreground: 0.6 0.04 145;
+
+    /* Gold accent */
+    --accent: 0.82 0.16 85;
+    --accent-foreground: 0.08 0.02 85;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.22 0.04 155;
+    --input: 0.18 0.04 155;
+    --ring: 0.78 0.22 145;
+
+    /* Charts */
+    --chart-1: 0.78 0.22 145;
+    --chart-2: 0.82 0.16 85;
+    --chart-3: 0.65 0.18 145;
+    --chart-4: 0.50 0.14 155;
+    --chart-5: 0.42 0.10 160;
+
+    /* Sidebar */
+    --sidebar: 0.10 0.025 155;
+    --sidebar-foreground: 0.95 0.01 130;
+    --sidebar-primary: 0.78 0.22 145;
+    --sidebar-primary-foreground: 0.06 0.02 150;
+    --sidebar-accent: 0.16 0.04 155;
+    --sidebar-accent-foreground: 0.88 0.05 140;
+    --sidebar-border: 0.22 0.04 155;
+    --sidebar-ring: 0.78 0.22 145;
+
+    /* Custom brand tokens */
+    --green-glow: 0.78 0.22 145;
+    --gold: 0.82 0.16 85;
+    --surface-elevated: 0.14 0.035 155;
+    --surface-card: 0.12 0.03 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Satoshi", "Cabinet Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ─── Utility Classes ─────────────────────────────────────── */
+@layer utilities {
+  .text-green-brand {
+    color: oklch(var(--primary));
+  }
+
+  .text-gold-brand {
+    color: oklch(var(--gold));
+  }
+
+  .bg-green-brand {
+    background-color: oklch(var(--primary));
+  }
+
+  .bg-gold-brand {
+    background-color: oklch(var(--gold));
+  }
+
+  .border-green-brand {
+    border-color: oklch(var(--primary));
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px oklch(var(--green-glow) / 0.4),
+      0 0 40px oklch(var(--green-glow) / 0.15);
+  }
+
+  .glow-green-sm {
+    box-shadow: 0 0 10px oklch(var(--green-glow) / 0.35),
+      0 0 20px oklch(var(--green-glow) / 0.12);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px oklch(var(--gold) / 0.4),
+      0 0 40px oklch(var(--gold) / 0.15);
+  }
+
+  .bg-surface-elevated {
+    background-color: oklch(var(--surface-elevated));
+  }
+
+  .bg-surface-card {
+    background-color: oklch(var(--surface-card));
+  }
+
+  .dollar-pattern {
+    background-image: repeating-linear-gradient(
+        45deg,
+        oklch(var(--primary) / 0.025) 0px,
+        oklch(var(--primary) / 0.025) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        oklch(var(--primary) / 0.025) 0px,
+        oklch(var(--primary) / 0.025) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+  }
+
+  .gradient-hero {
+    background: radial-gradient(
+        ellipse 80% 50% at 50% 0%,
+        oklch(var(--primary) / 0.12) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 80% 60%,
+        oklch(var(--gold) / 0.06) 0%,
+        transparent 60%
+      ),
+      oklch(var(--background));
+  }
+
+  .gradient-card-hover {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--card)) 0%,
+      oklch(var(--primary) / 0.08) 100%
+    );
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--primary)) 0%,
+      oklch(0.9 0.14 145) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--gold)) 0%,
+      oklch(0.95 0.1 85) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--primary) / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--primary) / 0.6);
+}
