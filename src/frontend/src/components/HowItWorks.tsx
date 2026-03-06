@@ -5,9 +5,9 @@ const steps = [
   {
     icon: Package,
     step: "01",
-    title: "Choose Your Package",
+    title: "Select a Package",
     description:
-      "Browse our range of Flash USDT packages starting from just $79. Pick the one that matches your needs — Starter, Popular, Pro, Elite, or Ultimate.",
+      "Choose how much Flash USDT you want to exchange — starting from $79 for 1,950 Flash USDT. The more you exchange, the better the rate.",
     color: "text-green-brand",
     border: "border-primary/30",
     bg: "bg-primary/10",
@@ -15,9 +15,9 @@ const steps = [
   {
     icon: QrCode,
     step: "02",
-    title: "Pay via QR Code",
+    title: "Send Real USDT",
     description:
-      "Scan our secure payment QR code and complete your transaction instantly. Enter your name and contact so we can reach you for delivery confirmation.",
+      "Scan the QR code and send the exact amount of Real USDT to our wallet. Enter your name and wallet address so we can process your order.",
     color: "text-gold-brand",
     border: "border-accent/30",
     bg: "bg-accent/10",
@@ -25,9 +25,9 @@ const steps = [
   {
     icon: Wallet,
     step: "03",
-    title: "Receive Real USDT",
+    title: "Receive Flash USDT",
     description:
-      "After payment verification, our team delivers your Real USDT directly to your wallet within 30 minutes. Track your order 24/7 via our support channels.",
+      "Once your Real USDT payment is confirmed, we send the Flash USDT directly to your wallet within 30 minutes. Support available 24/7.",
     color: "text-green-brand",
     border: "border-primary/30",
     bg: "bg-primary/10",
@@ -56,8 +56,8 @@ export default function HowItWorks() {
             How It <span className="text-gradient-green">Works</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Three simple steps to exchange your Flash USDT for Real USDT — no
-            complicated setup required.
+            Three simple steps to exchange your Real USDT for Flash USDT — fast,
+            secure, and no complicated setup required.
           </p>
         </motion.div>
 

@@ -17,6 +17,13 @@ export interface Package {
 
 export const PACKAGES: Package[] = [
   {
+    id: 0n,
+    name: "Demo",
+    price: 29,
+    amount: 899,
+    badge: "Try It Out",
+  },
+  {
     id: 1n,
     name: "Starter",
     price: 79,
@@ -108,7 +115,7 @@ export default function PackagesSection() {
         </motion.div>
 
         {/* Package Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
           {PACKAGES.map((pkg, index) => (
             <motion.div
               key={pkg.id.toString()}

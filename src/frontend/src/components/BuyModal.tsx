@@ -89,7 +89,7 @@ export default function BuyModal({ pkg, isOpen, onClose }: BuyModalProps) {
                 </DialogTitle>
                 <p className="text-muted-foreground text-sm mt-1">
                   <span className="text-gold-brand font-bold">
-                    ${pkg.price}
+                    ${pkg.price} Real USDT
                   </span>
                   {" → "}
                   <span className="text-green-brand font-bold">
@@ -159,13 +159,13 @@ export default function BuyModal({ pkg, isOpen, onClose }: BuyModalProps) {
             >
               {/* QR Code section */}
               <div className="px-6 py-5 border-b border-border bg-secondary/30">
-                <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex flex-col items-center gap-4">
                   <div className="flex-shrink-0">
                     <div className="relative">
-                      <div className="w-28 h-28 rounded-xl overflow-hidden border-2 border-primary/40 bg-white p-1">
+                      <div className="w-40 h-40 rounded-xl overflow-hidden border-2 border-primary/40 bg-white p-1">
                         <img
-                          src="/assets/generated/payment-qr.dim_400x400.png"
-                          alt="Payment QR Code"
+                          src="/assets/uploads/IMG_3409-1-1.jpg"
+                          alt="TRC20 Payment QR Code"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -174,13 +174,30 @@ export default function BuyModal({ pkg, isOpen, onClose }: BuyModalProps) {
                       </div>
                     </div>
                   </div>
-                  <div className="text-center sm:text-left">
-                    <h4 className="font-semibold text-foreground text-sm mb-1.5">
-                      Scan to Pay ${pkg.price}
+                  <div className="text-center w-full">
+                    <h4 className="font-semibold text-foreground text-sm mb-1">
+                      Send ${pkg.price} USDT (TRC20) to this address
                     </h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      Scan the QR code to complete your payment. After payment,
-                      our team will verify and deliver your Flash USDT within{" "}
+                    <div className="mt-2 px-3 py-2.5 rounded-lg bg-background border border-primary/30 flex items-center gap-2 justify-between">
+                      <span className="font-mono text-[11px] text-green-brand break-all text-left leading-relaxed">
+                        TLwSjmiGvazhBvkx5ZG8GM2TehrXdSRM9p
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          navigator.clipboard.writeText(
+                            "TLwSjmiGvazhBvkx5ZG8GM2TehrXdSRM9p",
+                          );
+                        }}
+                        className="flex-shrink-0 text-xs text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded border border-border hover:border-primary/40"
+                        title="Copy address"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
+                      After sending, fill in the form below. Our team will
+                      verify and deliver your Flash USDT within{" "}
                       <span className="text-green-brand font-semibold">
                         30 minutes
                       </span>

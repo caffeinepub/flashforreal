@@ -40,7 +40,7 @@ export default function Footer() {
               </span>
             </button>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mb-5">
-              The most trusted Flash USDT to Real USDT exchange platform. Fast,
+              The most trusted Real USDT to Flash USDT exchange platform. Fast,
               secure, and professional.
             </p>
 

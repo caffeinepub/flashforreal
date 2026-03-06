@@ -62,7 +62,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm font-medium text-green-brand mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Flash USDT Exchange — Live & Active
+          Real USDT → Flash USDT Exchange — Live & Active
         </motion.div>
 
         {/* Headline */}
@@ -72,9 +72,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6"
         >
-          Trade <span className="text-gradient-green">Flash USDT</span>
+          Trade <span className="text-gradient-gold">Real USDT</span>
           <br />
-          for <span className="text-gradient-gold">Real USDT</span>
+          for <span className="text-gradient-green">Flash USDT</span>
           <br />
           <span className="text-foreground/90">Fast & Secure</span>
         </motion.h1>
@@ -86,7 +86,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          The fastest and most trusted way to exchange Flash USDT for Real USDT.
+          The fastest and most trusted way to exchange Real USDT for Flash USDT.
           Premium packages, instant QR payment, and verified delivery within 30
           minutes.
         </motion.p>
