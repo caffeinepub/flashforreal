@@ -1,6 +1,12 @@
 import { Zap } from "lucide-react";
 import { motion } from "motion/react";
-import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
+import {
+  SiFacebook,
+  SiGmail,
+  SiInstagram,
+  SiTelegram,
+  SiX,
+} from "react-icons/si";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -76,6 +82,24 @@ export default function Footer() {
               >
                 <SiFacebook className="w-4 h-4" />
               </a>
+              <a
+                data-ocid="footer.telegram.link"
+                href="https://t.me/flashforreal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-sky-400/40 hover:bg-sky-500/10 transition-all duration-200"
+                aria-label="Telegram"
+              >
+                <SiTelegram className="w-4 h-4" />
+              </a>
+              <a
+                data-ocid="footer.gmail.link"
+                href="mailto:flashforreal.support@gmail.com"
+                className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-red-400/40 hover:bg-red-500/10 transition-all duration-200"
+                aria-label="Gmail"
+              >
+                <SiGmail className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -129,23 +153,21 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById("support");
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
-                  }}
+                <a
+                  href="https://t.me/flashforreal"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-green-brand transition-colors duration-200"
                 >
                   Telegram
-                </button>
+                </a>
               </li>
               <li>
                 <a
-                  href="mailto:support@flashforreal.io"
+                  href="mailto:flashforreal.support@gmail.com"
                   className="text-sm text-muted-foreground hover:text-green-brand transition-colors duration-200"
                 >
-                  Email Us
+                  Gmail Support
                 </a>
               </li>
             </ul>
